@@ -36,24 +36,25 @@ Problem 2
 
 from sys import flags
 import numpy as np
+
 def evalDecipherment(txt_1: str, txt_2: str) -> [float, float]:
     """
     docstring
     """
-    # Convert both texts to uppercase for case-insensitive comparison
+    # Converting the given texts to uppercase 
     txt_1 = txt_1.upper()
     txt_2 = txt_2.upper()
 
-    # Filter out non-alphabet characters
+    # Filteing out non alphabetical charactors
     txt_1_alpha = ''.join([i for i in txt_1 if i.isalpha()])
     txt_2_alpha = ''.join([i for i in txt_2 if i.isalpha()])
 
-    # Key Accuracy
+    # Checking for key accuracy 
     unique_chars_txt_1 = set(txt_1_alpha)
     accuracy = sum(1 for i in unique_chars_txt_1 if txt_1_alpha.find(i) != -1 and txt_1_alpha[txt_1_alpha.find(i)] == txt_2_alpha[txt_1_alpha.find(i)])
     key_accuracy = accuracy / len(unique_chars_txt_1)
 
-    # Decipherment Accuracy
+    # Checking for key accuracy while deciphering the cipher
     decipher = sum(1 for c1, c2 in zip(txt_1_alpha, txt_2_alpha) if c1 == c2)
     decipherment_accuracy = decipher / len(txt_1_alpha)
 

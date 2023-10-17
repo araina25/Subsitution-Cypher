@@ -46,10 +46,12 @@ def freqDict(ciphertext: str) -> dict:
     #Counting the occurence of every iacter in the text.
     count = Counter([i for i in ciphertext if i.isalpha()])  # Only consider alphabets
     
-    # Sort the keys first by frequency (descending) then alphabetically (ascending)
+    #Sorting the keys:  
+        # 1. By frequency -- Descending 
+        # 2. By Alphabetically -- Ascending 
     k_sort = sorted(count.keys(), key=lambda x: (-count[x], x))
     
-    # Generate a mapping from the sorted keys to the ETAOIN string
+    #Creating a Mapping from the sorted keys.
     mapping = {}
     for i, key in enumerate(k_sort):
         mapping[key] = ETAOIN[i]
@@ -68,7 +70,7 @@ def freqDecrypt(mapping: dict, ciphertext: str) -> str:
         if i in mapping:
             var += mapping[i]
         else:
-            var += i  # Preserve any iacters not in the mapping
+            var += i  #Saving any charactors that are not present in the mapping.
     
     return var
 
