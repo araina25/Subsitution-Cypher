@@ -36,26 +36,26 @@ Problem 2
 
 from sys import flags
 import numpy as np
-def evalDecipherment(text1: str, text2: str) -> [float, float]:
+def evalDecipherment(txt_1: str, txt_2: str) -> [float, float]:
     """
     docstring
     """
     # Convert both texts to uppercase for case-insensitive comparison
-    text1 = text1.upper()
-    text2 = text2.upper()
+    txt_1 = txt_1.upper()
+    txt_2 = txt_2.upper()
 
     # Filter out non-alphabet characters
-    text1_alpha = ''.join([char for char in text1 if char.isalpha()])
-    text2_alpha = ''.join([char for char in text2 if char.isalpha()])
+    txt_1_alpha = ''.join([i for i in txt_1 if i.isalpha()])
+    txt_2_alpha = ''.join([i for i in txt_2 if i.isalpha()])
 
     # Key Accuracy
-    unique_chars_text1 = set(text1_alpha)
-    correct_keys = sum(1 for char in unique_chars_text1 if text1_alpha.find(char) != -1 and text1_alpha[text1_alpha.find(char)] == text2_alpha[text1_alpha.find(char)])
-    key_accuracy = correct_keys / len(unique_chars_text1)
+    unique_chars_txt_1 = set(txt_1_alpha)
+    accuracy = sum(1 for i in unique_chars_txt_1 if txt_1_alpha.find(i) != -1 and txt_1_alpha[txt_1_alpha.find(i)] == txt_2_alpha[txt_1_alpha.find(i)])
+    key_accuracy = accuracy / len(unique_chars_txt_1)
 
     # Decipherment Accuracy
-    correct_decipher = sum(1 for c1, c2 in zip(text1_alpha, text2_alpha) if c1 == c2)
-    decipherment_accuracy = correct_decipher / len(text1_alpha)
+    decipher = sum(1 for c1, c2 in zip(txt_1_alpha, txt_2_alpha) if c1 == c2)
+    decipherment_accuracy = decipher / len(txt_1_alpha)
 
     return [key_accuracy, decipherment_accuracy]
 
