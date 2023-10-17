@@ -1,16 +1,10 @@
 # CMPUT 331, Fall 2023, Assignment 5
 
-### Submission Guidelines:
-
-For this assignment, **The Three files have been added to the submission are**:
+**The Three files in the submission are**:
 
 - **a5p1.py** for problem 1
 - **a5p2.py** for problem 2
 - **README** 
-
-### Background:
-
-All encipherment and decipherment in this assignment use the simple substitution cipher. When processing, lowercase and uppercase letters are treated as the same.
 
 ## Problem 1:
 
