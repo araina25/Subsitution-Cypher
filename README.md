@@ -6,6 +6,20 @@
 - **a5p2.py** for problem 2
 - **README** 
 
+
+## References:
+
+When working on this assignment, various resources might be utilized, whether it's official documentation, textbooks, online forums, or other means. It's vital to give proper attribution to these sources to maintain academic integrity and give credit to the original authors. Below are some references used for this assignment:
+
+1. **The Code Book -- Simon Singh** -- Downloaded copy
+   
+2. **Python Official Documentation**: Often referred to for understanding the intricacies of specific functions and methods. Available at [Python's official website](https://docs.python.org/3/).
+
+3. **Class Notes** -- Subsitution Cipher
+
+
+
+
 ## Problem 1:
 
 The task is to create a Python module named **a5p1.py**. This module should contain two primary functions:
@@ -48,13 +62,5 @@ You are to create a Python module named **a5p2.py**. This module should contain 
 [0.7142857142857143, 0.625]
 ```
 
-## References:
 
-When working on this assignment, various resources might be utilized, whether it's official documentation, textbooks, online forums, or other means. It's vital to give proper attribution to these sources to maintain academic integrity and give credit to the original authors. Below are some references used for this assignment:
-
-1. **The Code Book -- Simon Singh** -- Downloaded copy
-   
-2. **Python Official Documentation**: Often referred to for understanding the intricacies of specific functions and methods. Available at [Python's official website](https://docs.python.org/3/).
-
-3. **Class Notes** -- Subsitution Cipher
 
