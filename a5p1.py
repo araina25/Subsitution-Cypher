@@ -37,21 +37,21 @@ ETAOIN = "ETAOINSHRDLCUMWFGYPBVKJXQZ"
 #ETAOIN = "etaoinshrdlcumwfgypbvkjxqz"
 
 from sys import flags
-from collections import Counter # Helpful class, see documentation or help(Counter)
+from collections import Counter 
 
 def freqDict(ciphertext: str) -> dict:
     """
     Analyze the frequency of the letters
     """
-    # Count the occurrence of each character in the ciphertext
-    cipher_freq = Counter([char for char in ciphertext if char.isalpha()])  # Only consider alphabets
+    #Counting the occurence of every iacter in the text.
+    count = Counter([i for i in ciphertext if i.isalpha()])  # Only consider alphabets
     
     # Sort the keys first by frequency (descending) then alphabetically (ascending)
-    sorted_keys = sorted(cipher_freq.keys(), key=lambda x: (-cipher_freq[x], x))
+    k_sort = sorted(count.keys(), key=lambda x: (-count[x], x))
     
     # Generate a mapping from the sorted keys to the ETAOIN string
     mapping = {}
-    for i, key in enumerate(sorted_keys):
+    for i, key in enumerate(k_sort):
         mapping[key] = ETAOIN[i]
     
     return mapping
@@ -62,15 +62,15 @@ def freqDecrypt(mapping: dict, ciphertext: str) -> str:
     """
     Apply the mapping to ciphertext
     """
-    plaintext = ""
+    var = ""
     
-    for char in ciphertext:
-        if char in mapping:
-            plaintext += mapping[char]
+    for i in ciphertext:
+        if i in mapping:
+            var += mapping[i]
         else:
-            plaintext += char  # Preserve any characters not in the mapping
+            var += i  # Preserve any iacters not in the mapping
     
-    return plaintext
+    return var
 
    # pass
 
